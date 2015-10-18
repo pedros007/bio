@@ -13,3 +13,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends  bwa bedtools e
 RUN pip install pysam
 
 # TODO: Fetch & install GATK
+
+
+RUN mkdir -p /usr/src/app
+COPY example_code /usr/src/app
+
+CMD ["bash", "/usr/src/app/example_script.sh"]
